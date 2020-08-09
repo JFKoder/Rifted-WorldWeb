@@ -82,7 +82,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": ["src/app/RiftedWorld/rw_core/src/bundle.js"],
             "assets": [
               "src/favicon.ico",
               "src/assets"

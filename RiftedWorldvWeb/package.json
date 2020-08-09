@@ -1,13 +1,19 @@
 {
   "name": "rifted-worldv-web",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "Janick Koder",
+    "email": "system@my-shops.eu"
+  },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "browserify src/app/RiftedWorld/rw_core/main.js -o src/app/RiftedWorld/rw_core/src/bundle.js -d && ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "compile": "browserify src/app/RiftedWorld/rw_core/main.js -o src/app/RiftedWorld/rw_core/src/bundle.js -d"
   },
   "private": true,
   "dependencies": {
@@ -19,8 +25,10 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "browserify": "^16.5.0",
     "core-js": "^2.5.4",
     "ipfs": "^0.37.1",
+    "orbit-db": "^0.21.5",
     "rxjs": "~6.3.3",
     "tar-fs": "^2.0.0",
     "tslib": "^1.9.0",
